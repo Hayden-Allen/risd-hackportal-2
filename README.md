@@ -18,20 +18,6 @@ Several environment variables need to be set in order to use this template. Copy
 
 - `MONGODB_URI`: Connection string for a MongoDB database
 - `JWT_SECRET`: A long, complex, secret encryption key which will be used to encrypt JSON Web Tokens used for authentication
-- `REGISTRATION_KEY_ADMIN_PASSWORD`: A secret key which you can use to add registration keys to the database (see below...)
-
-### Registration Keys
-
-This template was designed to be an easy, all-in-one starting point for building app prototypes. Early in development, you may want to host your app at a publicly accessible URL but only allow invited users to sign up for the app. To facilitate this use case, this repository requires users to enter a "registration key" which you can send them when they're signing up. You can add registration keys by making an HTTP POST request to `/api/registration-key` with the following contents (JSON):
-
-```json
-{
-  "value": "<registration key that must be entered by new users>",
-  "password": "<REGISTRATION_KEY_ADMIN_PASSWORD>"
-}
-```
-
-Registration keys have no set expiration date; they expire whenever any user signs up using the respective key.
 
 ## Developing
 
@@ -58,4 +44,4 @@ You can preview the production build with `npm run preview`.
 
 ## Special Thanks
 
-*This README was based on that of the [SvelteKit default template repo](https://github.com/sveltejs/kit-template-default).*
+_This README was based on that of the [SvelteKit default template repo](https://github.com/sveltejs/kit-template-default)._

@@ -2,8 +2,7 @@
   import { fetchOk } from '$lib/fetch.js'
 
   let username = '',
-    password = '',
-    registrationKey = ''
+    password = ''
 
   let submitEnabled = true
 
@@ -18,7 +17,6 @@
         body: {
           username,
           password,
-          registrationKey,
         },
       })
     } catch (error) {
@@ -71,13 +69,6 @@
         autocomplete="new-password"
         required
         bind:value={password}
-      />
-      <input
-        class="w-full min-w-0 bg-zinc-900 text-inherit border-zinc-700 border border-solid rounded-md p-2 mb-4"
-        placeholder="Registration Key"
-        autocomplete="off"
-        required
-        bind:value={registrationKey}
       />
       <input
         class="font-bold px-4 py-2 bg-rose-500 disabled:bg-zinc-500 text-black rounded-md"
