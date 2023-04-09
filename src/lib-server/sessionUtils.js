@@ -9,7 +9,6 @@ function createSessionToken(user) {
   return jwt.sign(
     {
       _id: user._id,
-      username: user.username,
     },
     JWT_SECRET,
     {

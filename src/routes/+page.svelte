@@ -1,3 +1,11 @@
-<h1 class="text-xl font-bold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-  Redirecting...
-</h1>
+<script>
+  import PageWrapper from '$lib/components/PageWrapper.svelte'
+</script>
+
+<svelte:head>
+  <title>Home | RISD Hackathon</title>
+</svelte:head>
+
+<PageWrapper>
+  <!-- Home Page -->
+</PageWrapper>

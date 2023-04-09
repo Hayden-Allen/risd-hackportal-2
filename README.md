@@ -1,4 +1,4 @@
-# @iffyloop/sveltekit-starter
+# risd-hackportal-2
 
 Template for web app with SvelteKit, Tailwind, Heroicons, Mongoose, and cookie-based JWT authentication.
 

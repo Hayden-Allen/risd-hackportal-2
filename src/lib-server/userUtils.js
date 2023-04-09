@@ -2,7 +2,17 @@ import crypto from 'crypto'
 import connectToDb from '$lib-server/connectToDb.js'
 import User from '$lib-server/models/User.js'
 
-export async function createUser({ username, password }) {
+export async function createUser({
+  username,
+  password,
+  firstName,
+  lastName,
+  phoneNumber,
+  age,
+  country,
+  school,
+  currentLevelOfStudy,
+}) {
   await connectToDb()
 
   const salt = crypto.randomBytes(16).toString('hex')
@@ -13,6 +23,15 @@ export async function createUser({ username, password }) {
     username,
     passwordSalt: salt,
     passwordHash: hash,
+    isAdmin: false,
+    firstName,
+    lastName,
+    phoneNumber,
+    age,
+    country,
+    school,
+    currentLevelOfStudy,
+    numQrScans: 0,
   })
 }
 

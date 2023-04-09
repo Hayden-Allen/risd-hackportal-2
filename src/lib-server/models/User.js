@@ -19,6 +19,42 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  isAdmin: {
+    type: Boolean,
+    required: true,
+  },
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  phoneNumber: {
+    type: String,
+    required: true,
+  },
+  age: {
+    type: String,
+    required: true,
+  },
+  country: {
+    type: String,
+    required: true,
+  },
+  school: {
+    type: String,
+    required: true,
+  },
+  currentLevelOfStudy: {
+    type: String,
+    required: true,
+  },
+  numQrScans: {
+    type: Number,
+    required: true,
+  },
 })
 
 UserSchema.plugin(uniqueValidator)
