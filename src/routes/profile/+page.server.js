@@ -6,7 +6,6 @@ export async function load({ locals }) {
   if (!locals.user) {
     throw redirect(307, '/sign-in')
   }
-  console.log(locals.user)
 
   const user = await findUserById(locals.user._id)
 
@@ -16,6 +15,7 @@ export async function load({ locals }) {
       username: user.username,
       firstName: user.firstName,
       lastName: user.lastName,
+      isAdmin: user.isAdmin,
     },
     qrCode: await QRCode.toDataURL(locals.user._id, {
       color: {

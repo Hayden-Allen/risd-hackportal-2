@@ -51,12 +51,14 @@
       </div>
     </div>
     <div class="space-y-8">
-      <a
-        class="flex flex-row justify-center p-8 rounded-xl bg-green-700 text-green-100 text-2xl pixel"
-        href="/scan"
-      >
-        <div>Scan</div>
-      </a>
+      {#if data.user.isAdmin}
+        <a
+          class="flex flex-row justify-center p-8 rounded-xl bg-green-700 text-green-100 text-2xl pixel"
+          href="/scan"
+        >
+          <div>Scan</div>
+        </a>
+      {/if}
       <a
         class="flex flex-row justify-center p-8 rounded-xl bg-red-800 text-red-200 text-2xl pixel"
         href="/sign-out"
