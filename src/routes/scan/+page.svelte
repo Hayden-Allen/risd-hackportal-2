@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte'
+  import { onMount, onDestroy } from 'svelte'
   import { fetchJson } from '$lib/fetch.js'
   import jsQR from 'jsqr'
   import PageWrapper from '$lib/components/PageWrapper.svelte'
@@ -16,6 +16,7 @@
   let videoEl = null
   let videoReady = false
   let apiStatus = null
+  let frame = null
 
   async function handleDecodedUserId({ data: scannedUserId }) {
     apiStatus = 'loading'
@@ -36,7 +37,7 @@
   }
 
   function animate() {
-    window.requestAnimationFrame(animate)
+    frame = window.requestAnimationFrame(animate)
 
     if (!videoReady || videoEl.paused || videoEl.ended) {
       return
@@ -81,7 +82,11 @@
       canvas.height = videoEl.videoHeight
     })
 
-    window.requestAnimationFrame(animate)
+    frame = window.requestAnimationFrame(animate)
+  })
+
+  onDestroy(async () => {
+    if (window) window.cancelAnimationFrame(frame)
   })
 </script>
 

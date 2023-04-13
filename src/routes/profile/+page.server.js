@@ -6,6 +6,7 @@ export async function load({ locals }) {
   if (!locals.user) {
     throw redirect(307, '/sign-in')
   }
+  console.log(locals.user)
 
   const user = await findUserById(locals.user._id)
 

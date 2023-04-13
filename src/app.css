@@ -39,3 +39,24 @@ input {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #71717a;
 }
+
+@font-face {
+  font-family: 'PressStart2P';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+.pixel {
+  font-family: 'PressStart2P';
+}
+
+@keyframes hero-hover {
+  from {
+    transform: translateY(-2%);
+  }
+
+  to {
+    transform: translateY(2%);
+  }
+}
