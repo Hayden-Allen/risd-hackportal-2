@@ -186,10 +186,6 @@
                 </div>
               </li>
             </ul>
-            <div>
-              In addition to these recordings, we will also be hosting re-runs of the workshops over
-              the course of the Hackathon. Check the <a href="/schedule">Schedule</a> for times.
-            </div>
           </div>
         </div>
         <div class="flex flex-col space-y-4">

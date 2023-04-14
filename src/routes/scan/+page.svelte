@@ -87,6 +87,7 @@
 
   onDestroy(async () => {
     if (window) window.cancelAnimationFrame(frame)
+    stream.getTracks().forEach((track) => track.stop())
   })
 </script>
 

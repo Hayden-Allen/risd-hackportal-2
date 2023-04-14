@@ -10,7 +10,7 @@
     href="/"
   >
     <div class="hidden xl:block">-</div>
-    <div class="flex flex-row items-center space-x-4">
+    <div class="flex flex-row items-center space-x-2">
       <img class="w-12 h-12" src="/icon-menu.png" alt="M" />
       <div class="hidden xl:block">Menu</div>
     </div>
@@ -21,7 +21,7 @@
     href="/schedule"
   >
     <div class="hidden xl:block">-</div>
-    <div class="flex flex-row items-center space-x-4">
+    <div class="flex flex-row items-center space-x-2">
       <img class="w-12 h-12" src="/icon-quests.png" alt="Q" />
       <div class="hidden xl:block">Quests</div>
     </div>
@@ -32,7 +32,7 @@
     href="/faq"
   >
     <div class="hidden xl:block">-</div>
-    <div class="flex flex-row items-center space-x-4">
+    <div class="flex flex-row items-center space-x-2">
       <img class="w-12 h-12" src="/icon-guide.png" alt="G" />
       <div class="hidden xl:block">Guide</div>
     </div>
@@ -43,7 +43,7 @@
     href="/profile"
   >
     <div class="hidden xl:block">-</div>
-    <div class="flex flex-row items-center space-x-4">
+    <div class="flex flex-row items-center space-x-2">
       <img class="w-12 h-12" src="/icon-profile.png" alt="P" />
       <div class="hidden xl:block">Profile</div>
     </div>

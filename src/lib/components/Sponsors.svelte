@@ -2,7 +2,7 @@
   import BackgroundWrapper from '$lib/components/BackgroundWrapper.svelte'
 </script>
 
-<BackgroundWrapper url="/bg-top.png">
+<BackgroundWrapper url="/bg-bot.gif">
   <div class="flex flex-col space-y-8 px-4 pt-12 pb-24">
     <div style="font-size: min(6vw, 48px)" class="flex flex-row pixel text-4xl">Sponsors</div>
     <div class="flex flex-col items-center md:flex-row md:justify-evenly md:h-32">

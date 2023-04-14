@@ -13,7 +13,7 @@
     general: '#a7f3d0', // emerald 200
     challenge: '#ffe4e6', // rose 100
     workshop: '#bae6fd', // sky 200
-    activity: '#e9d5ff', // violet 200
+    activity: '#ddd6fe', // violet 200
     passed: '#a1a1aa', // zinc 400
   }
   const DESC = {
@@ -25,7 +25,7 @@
   }
   const days = [
     {
-      date: new Date(2023, 3, 10), // month is 0-indexed
+      date: new Date(2023, 3, 14), // month is 0-indexed
       events: [
         {
           name: 'Breakfast/Check-in',

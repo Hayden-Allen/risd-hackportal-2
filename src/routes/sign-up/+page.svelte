@@ -130,54 +130,66 @@
         required
         bind:value={phoneNumber}
       />
-      <select
-        class="w-full min-w-0 bg-zinc-900 text-inherit border-zinc-700 border border-solid rounded-md p-2 mb-2"
-        placeholder="Age"
-        autocomplete="off"
-        required
-        bind:value={age}
-      >
-        <option>Prefer not to answer</option>
-        {#each new Array(87) as _, i}
-          <option>{i + 13}</option>
-        {/each}
-      </select>
-      <select
-        class="w-full min-w-0 bg-zinc-900 text-inherit border-zinc-700 border border-solid rounded-md p-2 mb-2"
-        placeholder="Country"
-        autocomplete="off"
-        required
-        bind:value={country}
-      >
-        <option>Prefer not to answer</option>
-        {#each COUNTRY_NAMES as country}
-          <option>{country}</option>
-        {/each}
-      </select>
-      <select
-        class="w-full min-w-0 bg-zinc-900 text-inherit border-zinc-700 border border-solid rounded-md p-2 mb-2"
-        placeholder="School"
-        autocomplete="off"
-        required
-        bind:value={school}
-      >
-        <option>Prefer not to answer</option>
-        {#each SCHOOL_NAMES as school}
-          <option>{school}</option>
-        {/each}
-      </select>
-      <select
-        class="w-full min-w-0 bg-zinc-900 text-inherit border-zinc-700 border border-solid rounded-md p-2 mb-2"
-        placeholder="Current Level of Study"
-        autocomplete="off"
-        required
-        bind:value={currentLevelOfStudy}
-      >
-        <option>Prefer not to answer</option>
-        {#each ['Less than Secondary / High School', 'Secondary / High School', 'Undergraduate University (2 year - community college or similar)', 'Undergraduate University (3+ year)', 'Graduate University (Masters, Professional, Doctoral, etc)', 'Code School / Bootcamp', 'Other Vocational / Trade Program or Apprenticeship', 'Other', "I'm not currently a student"] as levelOfStudy}
-          <option>{levelOfStudy}</option>
-        {/each}
-      </select>
+      <div class="flex flex-col w-full min-w-0">
+        <div class="pl-2 text-zinc-300">Age</div>
+        <select
+          class="w-full min-w-0 bg-zinc-900 text-inherit border-zinc-700 border border-solid rounded-md p-2 mb-2"
+          placeholder="Age"
+          autocomplete="off"
+          required
+          bind:value={age}
+        >
+          <option>Prefer not to answer</option>
+          {#each new Array(87) as _, i}
+            <option>{i + 13}</option>
+          {/each}
+        </select>
+      </div>
+      <div class="flex flex-col w-full min-w-0">
+        <div class="pl-2 text-zinc-300">Country of residence</div>
+        <select
+          class="w-full min-w-0 bg-zinc-900 text-inherit border-zinc-700 border border-solid rounded-md p-2 mb-2"
+          placeholder="Country"
+          autocomplete="off"
+          required
+          bind:value={country}
+        >
+          <option>Prefer not to answer</option>
+          {#each COUNTRY_NAMES as country}
+            <option>{country}</option>
+          {/each}
+        </select>
+      </div>
+      <div class="flex flex-col w-full min-w-0">
+        <div class="pl-2 text-zinc-300">School</div>
+        <select
+          class="w-full min-w-0 bg-zinc-900 text-inherit border-zinc-700 border border-solid rounded-md p-2 mb-2"
+          placeholder="School"
+          autocomplete="off"
+          required
+          bind:value={school}
+        >
+          <option>Prefer not to answer</option>
+          {#each SCHOOL_NAMES as school}
+            <option>{school}</option>
+          {/each}
+        </select>
+      </div>
+      <div class="flex flex-col w-full min-w-0">
+        <div class="pl-2 text-zinc-300">Level of study</div>
+        <select
+          class="w-full min-w-0 bg-zinc-900 text-inherit border-zinc-700 border border-solid rounded-md p-2 mb-2"
+          placeholder="Current Level of Study"
+          autocomplete="off"
+          required
+          bind:value={currentLevelOfStudy}
+        >
+          <option>Prefer not to answer</option>
+          {#each ['Less than Secondary / High School', 'Secondary / High School', 'Undergraduate University (2 year - community college or similar)', 'Undergraduate University (3+ year)', 'Graduate University (Masters, Professional, Doctoral, etc)', 'Code School / Bootcamp', 'Other Vocational / Trade Program or Apprenticeship', 'Other', "I'm not currently a student"] as levelOfStudy}
+            <option>{levelOfStudy}</option>
+          {/each}
+        </select>
+      </div>
       <input
         class="font-bold px-4 py-2 bg-rose-500 disabled:bg-zinc-500 text-black rounded-md"
         type="submit"
